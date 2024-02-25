@@ -15,6 +15,8 @@ public class MostCommon implements Map<Object, Integer> {
         commons = mostCommon(iterable);
     }
 
+    // TODO: Add method overloading for options like order and other
+
     private Map<Object, Integer> mostCommon(Iterable<?> iterable) {
         Map<Object, Integer> occurrences = new HashMap<>();
 

@@ -1,27 +1,27 @@
 package io.github.duckysmacky;
 
+import io.github.duckysmacky.iterables.IterableManipulator;
 import io.github.duckysmacky.iterables.MostCommon;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(2);
+        List<Integer> numbers = new ArrayList<>();
+        List<String> words = new ArrayList<>();
+        Random random = new Random();
+        IterableManipulator im = new IterableManipulator();
 
-        String[] names = new String[]{
-          "Alex", "James", "Alex", "E", "Jame", "Steve", "Alex", "steve", "Steve"
-        };
+        for (int i = 0; i < 10; i++) {
+            numbers.add(random.nextInt(-100, 100));
+        }
 
+        words.add("Apple");
+        words.add("Something");
+        words.add("Eh");
 
-        Map<Object, Integer> common = new MostCommon(Arrays.asList(names));
-
-        System.out.println(new MostCommon(list));
-        System.out.println(new MostCommon(List.of(names)));
-        System.out.println(common);
-
+        System.out.println(numbers);
+        System.out.println(im.max(numbers));
+        System.out.println(im.min(numbers));
     }
 }
