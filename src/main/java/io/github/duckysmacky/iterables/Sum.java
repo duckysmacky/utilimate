@@ -1,18 +1,16 @@
 package io.github.duckysmacky.iterables;
 
-public class Max extends Number {
+public class Sum extends Number {
     private final Number number;
 
-    public <T extends Number> Max(Iterable<T> iterable) {
-        float biggest = Float.MIN_VALUE;
+    public <T extends Number> Sum(Iterable<T> iterable) {
+        float sum = 0f;
 
         for (T value : iterable) {
-            if (value.floatValue() > biggest) {
-                biggest = value.floatValue();
-            }
+            sum += value.floatValue();
         }
 
-        this.number = biggest;
+        this.number = sum;
     }
 
     @Override
