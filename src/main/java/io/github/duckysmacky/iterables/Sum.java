@@ -13,6 +13,14 @@ public class Sum extends Number {
         this.number = sum;
     }
 
+    public <T extends Number> Sum(T... numbers) {
+        float sum = 0f;
+
+        for (T num : numbers) { sum += num.floatValue(); }
+
+        this.number = sum;
+    }
+
     @Override
     public String toString() {
         return number.toString();

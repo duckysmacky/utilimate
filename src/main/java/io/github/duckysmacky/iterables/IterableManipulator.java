@@ -9,8 +9,6 @@ public class IterableManipulator {
      - Rename class to something better dummy
      - All() - Add Javadoc
      - Any() - Add Javadoc
-     - Filter()
-     - Map()
      - Max() and Min() for string lengths? could be fun
      */
 

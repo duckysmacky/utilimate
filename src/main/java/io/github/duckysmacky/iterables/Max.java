@@ -15,6 +15,16 @@ public class Max extends Number {
         this.number = biggest;
     }
 
+    public <T extends Number> Max(T number) {
+        float biggest = Float.MIN_VALUE;
+
+        if (number.floatValue() > biggest) {
+            biggest = number.floatValue();
+        }
+
+        this.number = biggest;
+    }
+
     @Override
     public String toString() {
         return number.toString();

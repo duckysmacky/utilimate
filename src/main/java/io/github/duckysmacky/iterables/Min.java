@@ -15,6 +15,16 @@ public class Min extends Number {
         this.number = smallest;
     }
 
+    public <T extends Number> Min(T number) {
+        float smallest = Float.MAX_VALUE;
+
+        if (number.floatValue() < smallest) {
+            smallest = number.floatValue();
+        }
+
+        this.number = smallest;
+    }
+
     @Override
     public String toString() {
         return number.toString();
