@@ -1,4 +1,4 @@
-package io.github.duckysmacky.iterables;
+package io.github.duckysmacky;
 
 /**
  * A container class for variety of useful functions (which are mostly just shortcuts to existing functionality) to

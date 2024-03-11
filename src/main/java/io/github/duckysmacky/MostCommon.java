@@ -1,4 +1,4 @@
-package io.github.duckysmacky.iterables;
+package io.github.duckysmacky;
 
 import java.util.*;
 
