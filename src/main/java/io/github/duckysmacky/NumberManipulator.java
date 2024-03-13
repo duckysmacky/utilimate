@@ -1,5 +1,9 @@
 package io.github.duckysmacky;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * A container class for variety of useful functions (which are mostly just shortcuts to existing functionality) to
  * manipulate numbers and number iterables
@@ -151,5 +155,22 @@ public class NumberManipulator {
         }
 
         return false;
+    }
+
+    /**
+     * A method which counts <b>most common values</b> in a given iterable
+     * <p>E.g.: An {@link ArrayList} containing a list of names <i>["Alex", "James", "Alex"] </i> will return
+     * <i>{"Alex"=2, "James"=1}</i></p>
+     * @param iterable any iterable
+     * @return a {@link Map} of keys (items in a passed iterable) and values (occurrences of those items)
+     */
+    private static Map<Object, Integer> mostCommon(Iterable<?> iterable) {
+        Map<Object, Integer> occurrences = new HashMap<>();
+
+        for (Object item : iterable) {
+            occurrences.put(item, occurrences.get(item) != null ? occurrences.get(item) + 1 : 1);
+        }
+
+        return occurrences;
     }
 }

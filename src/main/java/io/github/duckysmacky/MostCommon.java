@@ -3,10 +3,9 @@ package io.github.duckysmacky;
 import java.util.*;
 
 /**
- * A class which contains a {@link Map} of keys (items in a passed iterable) and values (occurrences of those items)
- *
- * <p>E.g.: An {@link ArrayList} containing a list of names <i>["Alex", "James", "Alex", "Jame", "Steve", "Alex",
- * "steve", "Steve"]</i> will return <i>{Alex=3, James=1, Steve=2, steve=1, Jame=1}</i></p>
+ * A class which holds a {@link Map} of keys (items in a passed iterable) and values (occurrences of those items)
+ * <p>E.g.: An {@link ArrayList} containing a list of names <i>["Alex", "James", "Alex"]</i> will return
+ * <i>{"Alex"=2, "James"=1}</i></p>
  */
 public class MostCommon implements Map<Object, Integer> {
     final Map<Object, Integer> commons;
