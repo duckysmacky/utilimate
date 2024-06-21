@@ -2,7 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
 
-import static io.github.duckysmacky.NumberManipulator.*;
+import static io.github.duckysmacky.ssutils.NumberManipulator.*;
 import static junit.framework.TestCase.assertEquals;
 
 public class NumberManipulatorTest {

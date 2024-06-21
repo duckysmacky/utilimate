@@ -1,4 +1,4 @@
-package io.github.duckysmacky;
+package io.github.duckysmacky.ssutils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
