@@ -30,17 +30,17 @@ public class ListUtilTest {
 
     @Test
     public void maxTest() {
-        assertEquals(max(numberList), 263);
+        assertEquals(max(numberList).intValue(), 263);
     }
 
     @Test
     public void minTest() {
-        assertEquals(min(numberList), -56);
+        assertEquals(min(numberList).intValue(), -56);
     }
 
     @Test
     public void sumTest() {
-        assertEquals(sum(numberList), 387);
+        assertEquals(sum(numberList).intValue(), 387);
     }
 
     @Test
@@ -66,9 +66,14 @@ public class ListUtilTest {
     }
 
     @Test
-    public void findMostCommonTest() {
-        Map<String, Integer> mostCommonName = Map.of("Bob", 4);
+    public void countOccurrencesTest() {
+        Map<String, Integer> mostCommonName = Map.of(
+                "Bob", 4,
+                "Alex", 3,
+                "John", 2,
+                "bob", 1
+        );
 
-        assertEquals(findMostCommon(nameList), mostCommonName);
+        assertEquals(countOccurrences(nameList), mostCommonName);
     }
 }

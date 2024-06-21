@@ -13,10 +13,10 @@ public final class ListUtil {
      */
     // TODO - Separate decimal and whole numbers
     @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
-    public static <T extends Number> T max(Iterable<T> iterable) {
+    public static <T extends Number> Number max(Iterable<T> iterable) {
         Float biggest = Float.MIN_VALUE;
         for (T number : iterable) if (number.floatValue() > biggest) biggest = number.floatValue();
-        return (T) biggest;
+        return biggest;
     }
 
     /**
@@ -26,10 +26,10 @@ public final class ListUtil {
      */
     // TODO - Separate decimal and whole numbers
     @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
-    public static <T extends Number> T min(Iterable<T> iterable) {
+    public static <T extends Number> Number min(Iterable<T> iterable) {
         Float smallest = Float.MAX_VALUE;
         for (T number : iterable) if (number.floatValue() < smallest) smallest = number.floatValue();
-        return (T) smallest;
+        return smallest;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ListUtil {
      * @return sum of numbers
      */
     @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
-    public static <T extends Number> T sum(Iterable<T> iterable) {
+    public static <T extends Number> Number sum(Iterable<T> iterable) {
         Float sum = 0f;
         for (T value : iterable) sum += value.floatValue();
-        return (T) sum;
+        return sum;
     }
 
     /**
@@ -76,17 +76,18 @@ public final class ListUtil {
     }
 
     // TODO - add method Javadoc
-    public static Map<Object, Integer> findMostCommon(Iterable<?> iterable) {
+    public static Map<Object, Integer> countOccurrences(Iterable<?> iterable) {
         Map<Object, Integer> occurrences = new HashMap<>();
 
         for (Object item : iterable) {
-            occurrences.put(item,
-                    occurrences.get(item) != null
-                            ? occurrences.get(item) + 1
-                            : 1
+            occurrences.put(item, occurrences.get(item) != null
+                    ? occurrences.get(item) + 1
+                    : 1
             );
         }
 
         return occurrences;
     }
+
+    // TODO - add findMostCommon method
 }

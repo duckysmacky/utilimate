@@ -8,12 +8,12 @@ public final class NumberUtil {
      * @param numbers numbers to compare
      * @return biggest value
      */
-    @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
+    @SuppressWarnings("WrapperTypeMayBePrimitive")
     @SafeVarargs
-    public static <T extends Number> T max(T... numbers) {
+    public static <T extends Number> Number max(T... numbers) {
         Float biggest = Float.MIN_VALUE;
         for (T value : numbers) if (value.floatValue() > biggest) biggest = value.floatValue();
-        return (T) biggest;
+        return biggest;
     }
 
     /**
@@ -21,12 +21,12 @@ public final class NumberUtil {
      * @param numbers numbers to compare
      * @return smallest value
      */
-    @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
+    @SuppressWarnings("WrapperTypeMayBePrimitive")
     @SafeVarargs
-    public static <T extends Number> T min(T... numbers) {
+    public static <T extends Number> Number min(T... numbers) {
         Float smallest = Float.MAX_VALUE;
         for (T value : numbers) if (value.floatValue() < smallest) smallest = value.floatValue();
-        return (T) smallest;
+        return smallest;
     }
 
     // TODO - Max() and Min() for string lengths
