@@ -3,7 +3,11 @@ package io.github.duckysmacky.ssutils;
 import java.util.HashMap;
 import java.util.Map;
 
-// TODO - add class Javadoc
+/**
+ * <p> Static container class which has methods for manipulating, finding
+ * and checking values within lists and other iterables.
+ * <p> All methods within the class are static and can be used right out of the box.
+ */
 public final class ListUtil {
 
     /**
@@ -12,7 +16,7 @@ public final class ListUtil {
      * @return biggest value
      */
     // TODO - Separate decimal and whole numbers
-    @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
+    @SuppressWarnings("WrapperTypeMayBePrimitive")
     public static <T extends Number> Number max(Iterable<T> iterable) {
         Float biggest = Float.MIN_VALUE;
         for (T number : iterable) if (number.floatValue() > biggest) biggest = number.floatValue();
@@ -25,7 +29,7 @@ public final class ListUtil {
      * @return biggest value
      */
     // TODO - Separate decimal and whole numbers
-    @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
+    @SuppressWarnings("WrapperTypeMayBePrimitive")
     public static <T extends Number> Number min(Iterable<T> iterable) {
         Float smallest = Float.MAX_VALUE;
         for (T number : iterable) if (number.floatValue() < smallest) smallest = number.floatValue();
@@ -37,7 +41,7 @@ public final class ListUtil {
      * @param iterable iterable of numbers
      * @return sum of numbers
      */
-    @SuppressWarnings({"unchecked", "WrapperTypeMayBePrimitive"})
+    @SuppressWarnings("WrapperTypeMayBePrimitive")
     public static <T extends Number> Number sum(Iterable<T> iterable) {
         Float sum = 0f;
         for (T value : iterable) sum += value.floatValue();
@@ -75,17 +79,19 @@ public final class ListUtil {
         return false;
     }
 
-    // TODO - add method Javadoc
+    /**
+     * Searches an iterable and finds number of occurrences for each value
+     * @param iterable any iterable object
+     * @return a hash map containig key-value pairs of each value and number of its occurrences
+     */
     public static Map<Object, Integer> countOccurrences(Iterable<?> iterable) {
         Map<Object, Integer> occurrences = new HashMap<>();
-
         for (Object item : iterable) {
             occurrences.put(item, occurrences.get(item) != null
                     ? occurrences.get(item) + 1
                     : 1
             );
         }
-
         return occurrences;
     }
 

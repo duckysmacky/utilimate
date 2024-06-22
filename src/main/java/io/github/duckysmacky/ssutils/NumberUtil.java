@@ -1,6 +1,10 @@
 package io.github.duckysmacky.ssutils;
 
-// TODO - add class Javadoc
+/**
+ * <p> Static container class which has methods for easier workflow with multiple numbers
+ * as well as useful number manipulations.
+ * <p> All methods within the class are static and can be used right out of the box.
+ */
 public final class NumberUtil {
 
     /**
