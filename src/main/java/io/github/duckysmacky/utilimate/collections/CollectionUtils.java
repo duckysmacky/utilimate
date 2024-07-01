@@ -11,21 +11,10 @@ public final class CollectionUtils {
     private CollectionUtils() {}
 
     /**
-     * Returns the biggest value in a collection
+     * Finds the smallest value in a given collection
      * @param collection collection of numbers
-     * @return biggest value
-     */
-    // TODO - Separate decimal and whole numbers
-    public static <T extends Number> Number max(Collection<T> collection) {
-        float biggest = Float.MIN_VALUE;
-        for (T number : collection) if (number.floatValue() > biggest) biggest = number.floatValue();
-        return biggest;
-    }
-
-    /**
-     * Returns the biggest value in a collection
-     * @param collection collection of numbers
-     * @return biggest value
+     * @param <T> value extends number
+     * @return biggest number value
      */
     // TODO - Separate decimal and whole numbers
     public static <T extends Number> Number min(Collection<T> collection) {
@@ -35,9 +24,23 @@ public final class CollectionUtils {
     }
 
     /**
-     * Returns the sum of all values in a collection
-     * @param collection collection containing numbers
-     * @return sum of numbers
+     * Finds the biggest value in a given collection
+     * @param collection collection of numbers
+     * @param <T> value extends number
+     * @return biggest number value
+     */
+    // TODO - Separate decimal and whole numbers
+    public static <T extends Number> Number max(Collection<T> collection) {
+        float biggest = Float.MIN_VALUE;
+        for (T number : collection) if (number.floatValue() > biggest) biggest = number.floatValue();
+        return biggest;
+    }
+
+    /**
+     * Finds the sum of all values in a given collection
+     * @param collection collection of numbers
+     * @param <T> value extends number
+     * @return sum of all values
      */
     public static <T extends Number> Number sum(Collection<T> collection) {
         float sum = 0f;
@@ -46,9 +49,10 @@ public final class CollectionUtils {
     }
 
     /**
-     * Checks if all values in a collection are valid (true or not null)
+     * Checks values in a collection for being valid (true or not null)
      * @param collection collection of values
-     * @return {@code true} if all values are valid
+     * @param <T> value
+     * @return {@code boolean} whether all values are valid
      */
     public static <T> boolean all(Collection<T> collection) {
         for (T value : collection) {
@@ -62,9 +66,10 @@ public final class CollectionUtils {
     }
 
     /**
-     * Checks if any value in a collection is valid (true or not null)
+     * Checks for at least one value in a collection being valid (true or not null)
      * @param collection collection of values
-     * @return {@code true} if any value is valid
+     * @param <T> value
+     * @return {@code boolean} whether any value is valid
      */
     public static <T> boolean any(Collection<T> collection) {
         for (T value : collection) {

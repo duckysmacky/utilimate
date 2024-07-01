@@ -1,7 +1,15 @@
 package io.github.duckysmacky.utilimate.enums;
 
-// TODO - add enum Javadoc
+/**
+ * An enum containing values for specifying order
+ */
 public enum Order {
+    /**
+     * Ascending order
+     */
     ASCENDING,
+    /**
+     * Descending order
+     */
     DESCENDING
 }

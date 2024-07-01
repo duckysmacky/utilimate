@@ -13,9 +13,10 @@ public final class ListUtils {
     private ListUtils() {}
 
     /**
-     * Searches a list and finds number of occurrences for each value
-     * @param list any list object
-     * @return a hash map containing key-value pairs of each value and number of its occurrences
+     * Counts how many times each unique value appears in a given list
+     * @param list list of values
+     * @param <T> value
+     * @return {@code Map} containing key-value pairs of each value and number of its occurrences
      */
     public static <T> Map<T, Integer> countOccurrences(List<T> list) {
         Map<T, Integer> occurrences = new HashMap<>();
@@ -30,5 +31,5 @@ public final class ListUtils {
         return occurrences;
     }
 
-    // TODO - add findMostCommon method
+    // TODO - add findMostCommon function
 }
