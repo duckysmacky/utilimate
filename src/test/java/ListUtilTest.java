@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static io.github.duckysmacky.ssutils.ListUtil.*;
+import static io.github.duckysmacky.utilimate.collections.ListUtil.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ListUtilTest {

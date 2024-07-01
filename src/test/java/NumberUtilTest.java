@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import static io.github.duckysmacky.ssutils.NumberUtil.*;
+import static io.github.duckysmacky.utilimate.math.NumberUtil.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NumberUtilTest {

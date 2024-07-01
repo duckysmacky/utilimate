@@ -1,11 +1,11 @@
 
-import io.github.duckysmacky.ssutils.enums.Order;
+import io.github.duckysmacky.utilimate.enums.Order;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static io.github.duckysmacky.ssutils.MapUtil.*;
+import static io.github.duckysmacky.utilimate.collections.MapUtil.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MapUtilTest {

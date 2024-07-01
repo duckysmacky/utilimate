@@ -1,10 +1,11 @@
-package io.github.duckysmacky.ssutils;
+package io.github.duckysmacky.utilimate.math;
 
 /**
  * <p> Static container class which has methods for easier workflow with multiple numbers
  * as well as useful number manipulations.
  * <p> All methods within the class are static and can be used right out of the box.
  */
+@SuppressWarnings("WrapperTypeMayBePrimitive")
 public final class NumberUtil {
 
     /**
@@ -12,7 +13,6 @@ public final class NumberUtil {
      * @param numbers numbers to compare
      * @return biggest value
      */
-    @SuppressWarnings("WrapperTypeMayBePrimitive")
     @SafeVarargs
     public static <T extends Number> Number max(T... numbers) {
         Float biggest = Float.MIN_VALUE;
@@ -25,7 +25,6 @@ public final class NumberUtil {
      * @param numbers numbers to compare
      * @return smallest value
      */
-    @SuppressWarnings("WrapperTypeMayBePrimitive")
     @SafeVarargs
     public static <T extends Number> Number min(T... numbers) {
         Float smallest = Float.MAX_VALUE;

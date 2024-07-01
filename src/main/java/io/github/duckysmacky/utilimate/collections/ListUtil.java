@@ -1,4 +1,4 @@
-package io.github.duckysmacky.ssutils;
+package io.github.duckysmacky.utilimate.collections;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,10 @@ import java.util.Map;
  * and checking values within lists and other iterables.
  * <p> All methods within the class are static and can be used right out of the box.
  */
+@SuppressWarnings("WrapperTypeMayBePrimitive")
 public final class ListUtil {
+
+    private ListUtil() {}
 
     /**
      * Returns the biggest value in an iterable
@@ -41,7 +44,6 @@ public final class ListUtil {
      * @param iterable iterable of numbers
      * @return sum of numbers
      */
-    @SuppressWarnings("WrapperTypeMayBePrimitive")
     public static <T extends Number> Number sum(Iterable<T> iterable) {
         Float sum = 0f;
         for (T value : iterable) sum += value.floatValue();

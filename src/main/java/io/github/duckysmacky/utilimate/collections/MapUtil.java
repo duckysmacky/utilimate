@@ -1,6 +1,6 @@
-package io.github.duckysmacky.ssutils;
+package io.github.duckysmacky.utilimate.collections;
 
-import io.github.duckysmacky.ssutils.enums.Order;
+import io.github.duckysmacky.utilimate.enums.Order;
 
 import java.util.*;
 
