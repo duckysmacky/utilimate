@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c96dc56-260f-48c6-9cab-9c87ab76e937" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/hotswap_agent.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/CollectionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CollectionUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/ssutils/ListUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/ssutils/MapUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/ssutils/NumberUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/math/NumberUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/ssutils/enums/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/enums/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ListUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MapUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MapUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/NumberUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NumberUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ListUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MapUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MapUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +38,30 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="utilimate" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="utilimate" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="utilimate" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,6 +70,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2ibvRaGEWm436fKBQSsCp4NMwKK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="flattenModules" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,8 +84,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.ssutils [clean].executor": "Run",
+    "Gradle.utilimate [clean].executor": "Run",
+    "Gradle.utilimate [javadocJar].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "java.suggest.annotation.dependency": "false",
@@ -80,8 +99,13 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="ssutils [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.utilimate [clean]">
+    <configuration name="utilimate [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -103,9 +127,32 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="utilimate [javadocJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="javadocJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ssutils [clean]" />
+        <item itemvalue="Gradle.utilimate [clean]" />
+        <item itemvalue="Gradle.utilimate [javadocJar]" />
       </list>
     </recent_temporary>
   </component>

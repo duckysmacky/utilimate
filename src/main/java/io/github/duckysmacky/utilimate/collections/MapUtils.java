@@ -5,11 +5,11 @@ import io.github.duckysmacky.utilimate.enums.Order;
 import java.util.*;
 
 /**
- * <p> Static container class which has methods for manipulating, finding
- * and sorting values in maps.
+ * <p> Utility class providing static methods for common operations on maps.
+ * Includes methods for filtering, sorting by key or value, merging maps, and more.
  * <p> All methods within the class are static and can be used right out of the box.
  */
-public final class MapUtil {
+public final class MapUtils {
 
     /**
      * Sorts a map by its values based on a given order

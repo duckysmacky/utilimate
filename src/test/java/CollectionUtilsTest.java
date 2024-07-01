@@ -3,19 +3,16 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
-import static io.github.duckysmacky.utilimate.collections.ListUtil.*;
+import static io.github.duckysmacky.utilimate.collections.CollectionUtils.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ListUtilTest {
+public class CollectionUtilsTest {
     private static List<Integer> numberList;
     private static List<Boolean> booleanMixedList;
     private static List<Boolean> booleanAllList;
     private static List<Boolean> booleanNoneList;
     private static List<Integer> booleanNumbersList;
-
-    private static List<String> nameList;
 
     @BeforeAll
     public static void initialize() {
@@ -24,8 +21,6 @@ public class ListUtilTest {
         booleanAllList = Arrays.asList(true, true, true, true, true, true);
         booleanNoneList = Arrays.asList(false, false, false, false, false, false);
         booleanNumbersList = Arrays.asList(1, 0, 0, 1, 1, 0);
-
-        nameList = Arrays.asList("Bob", "John", "Alex", "Bob", "Alex", "bob", "Bob", "John", "Alex", "Bob");
     }
 
     @Test
@@ -63,17 +58,5 @@ public class ListUtilTest {
 
         // False
         assertFalse(any(booleanNoneList));
-    }
-
-    @Test
-    public void countOccurrencesTest() {
-        Map<String, Integer> mostCommonName = Map.of(
-                "Bob", 4,
-                "Alex", 3,
-                "John", 2,
-                "bob", 1
-        );
-
-        assertEquals(countOccurrences(nameList), mostCommonName);
     }
 }
