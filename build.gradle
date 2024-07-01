@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'signing'
+    id 'org.jreleaser' version '1.13.1'
 }
 
 group = 'io.github.duckysmacky'
@@ -23,4 +23,61 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'utilimate'
+            from components.java
+
+            pom {
+                name = 'UtiliMate'
+                description = 'The ultimate Java utility library to streamline development and reduce boilerplate code'
+                url = 'https://github.com/duckysmacky/utilimate'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'duckysmacky'
+                        name = 'Nikita Doronin'
+                        email = 'nikdorkir@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/duckysmacky/utilimate.git'
+                    developerConnection = 'scm:git:ssh://github.com/duckysmacky/utilimate.git'
+                    url = 'https://github.com/duckysmacky/utilimate'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url = layout.buildDirectory.dir('staging-deploy')
+        }
+    }
+}
+
+jreleaser {
+    signing {
+        active = 'ALWAYS'
+        armored = true
+    }
+    deploy {
+        maven {
+            mavenCentral {
+                sonatype {
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository('target/staging-deploy')
+                }
+            }
+        }
+    }
 }
