@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'org.jreleaser' version '1.13.1'
 }
 
 group = 'io.github.duckysmacky'
@@ -59,24 +58,11 @@ publishing {
 
     repositories {
         maven {
-            url = layout.buildDirectory.dir('staging-deploy')
-        }
-    }
-}
-
-jreleaser {
-    signing {
-        active = 'ALWAYS'
-        armored = true
-    }
-    deploy {
-        maven {
-            mavenCentral {
-                sonatype {
-                    active = 'ALWAYS'
-                    url = 'https://central.sonatype.com/api/v1/publisher'
-                    stagingRepository('target/staging-deploy')
-                }
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/duckysmacky/utilimate"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }

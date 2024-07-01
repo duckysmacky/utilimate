@@ -8,15 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c96dc56-260f-48c6-9cab-9c87ab76e937" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.jreleaser/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/CollectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/CollectionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/enums/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/enums/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/math/NumberUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/math/NumberUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +127,29 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.utilimate [jreleaserPublish]">
+  <component name="RunManager" selected="Gradle.utilimate [build]">
+    <configuration name="utilimate [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="utilimate [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,28 +162,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="utilimate [javadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="javadoc" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.utilimate [build]" />
+        <item itemvalue="Gradle.utilimate [clean]" />
         <item itemvalue="Gradle.utilimate [jreleaserPublish]" />
         <item itemvalue="Gradle.utilimate [publishToMavenLocal]" />
         <item itemvalue="Gradle.utilimate [publish]" />
-        <item itemvalue="Gradle.utilimate [javadoc]" />
-        <item itemvalue="Gradle.utilimate [clean]" />
       </list>
     </recent_temporary>
   </component>
