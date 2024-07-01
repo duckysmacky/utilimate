@@ -17,6 +17,22 @@ to make Java programming more enjoyable and efficient.
 
 *still very work in progress*
 
+## Install
+
+### Maven
+```maven
+<dependency>
+  <groupId>io.github.duckysmacky</groupId>
+  <artifactId>utilimate</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
+
+### Gradle
+```gradle
+implementation 'io.github.duckysmacky:utilimate:0.1.0'
+```
+
 ## Features
 
 ### Collection Utilities
