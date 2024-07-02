@@ -39,7 +39,7 @@ public final class StringUtils {
      * @since 0.2.0
      */
     public static boolean valid(String string) {
-        return string == null || string.isEmpty();
+        return !(string == null || string.isEmpty());
     }
 
     /** Finds the smallest string by length within given strings

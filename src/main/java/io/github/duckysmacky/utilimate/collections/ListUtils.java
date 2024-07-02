@@ -113,4 +113,22 @@ public final class ListUtils {
         }
         return leastCommon;
     }
+
+    public static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
+        return list.stream()
+            .filter(predicate)
+            .collect(Collectors.toList());
+    }
+
+    public static <T, R> List<R> map(List<T> list, Function<T, R> mapper) {
+        return list.stream()
+            .map(mapper)
+            .collect(Collectors.toList());
+    }
+
+    public static <T> T reduce(List<T> list, BinaryOperator<T> accumulator) {
+        return list.stream()
+            .reduce(accumulator)
+            .orElse(null);
+    }
 }

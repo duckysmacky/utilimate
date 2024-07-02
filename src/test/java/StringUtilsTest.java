@@ -6,6 +6,7 @@ import java.util.List;
 import static io.github.duckysmacky.utilimate.strings.StringUtils.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class StringUtilsTest {
     private static List<String> listOfStrings;
 
@@ -31,7 +32,10 @@ public class StringUtilsTest {
         String validString = "A valid string";
         String emptyString = "";
 
+        // True
         assertTrue(valid(validString));
+
+        // False
         assertFalse(valid(emptyString));
     }
 

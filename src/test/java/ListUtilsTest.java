@@ -1,6 +1,5 @@
 import io.github.duckysmacky.utilimate.collections.MapUtils;
 import io.github.duckysmacky.utilimate.enums.Order;
-import io.github.duckysmacky.utilimate.strings.StringUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
