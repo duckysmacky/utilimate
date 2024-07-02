@@ -12,4 +12,5 @@
 
 ### Added
 
+- 7 String Utilities
 - Since `x` version to JavaDocs
