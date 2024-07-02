@@ -8,9 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c96dc56-260f-48c6-9cab-9c87ab76e937" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/strings/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StringUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/CollectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/CollectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/MapUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/enums/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/enums/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/math/NumberUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/math/NumberUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CollectionUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CollectionUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ListUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MapUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MapUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/NumberUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NumberUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +114,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "0.2.0",
     "ignore.virus.scanning.warn.message": "true",
     "java.suggest.annotation.dependency": "false",
     "kotlin-language-version-configured": "true",
@@ -121,7 +133,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.utilimate [build]">
+  <component name="RunManager" selected="Gradle.utilimate [publish]">
     <configuration name="utilimate [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -234,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.utilimate [publish]" />
         <item itemvalue="Gradle.utilimate [build]" />
         <item itemvalue="Gradle.utilimate [clean]" />
         <item itemvalue="Gradle.utilimate [jreleaserPublish]" />
         <item itemvalue="Gradle.utilimate [publishToMavenLocal]" />
-        <item itemvalue="Gradle.utilimate [publish]" />
       </list>
     </recent_temporary>
   </component>

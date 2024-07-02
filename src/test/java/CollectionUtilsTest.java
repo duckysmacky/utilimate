@@ -25,17 +25,17 @@ public class CollectionUtilsTest {
 
     @Test
     public void maxTest() {
-        assertEquals(max(numberList).intValue(), 263);
+        assertEquals(263, max(numberList).intValue());
     }
 
     @Test
     public void minTest() {
-        assertEquals(min(numberList).intValue(), -56);
+        assertEquals(-56, min(numberList).intValue());
     }
 
     @Test
     public void sumTest() {
-        assertEquals(sum(numberList).intValue(), 387);
+        assertEquals(387, sum(numberList).intValue());
     }
 
     @Test

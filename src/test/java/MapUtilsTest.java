@@ -48,8 +48,8 @@ public class MapUtilsTest {
                 "Smallest", 1
         );
 
-        assertEquals(sortByValue(unsortedValueMap, Order.ASCENDING), ascendingMap);
-        assertEquals(sortByValue(unsortedValueMap, Order.DESCENDING), descendingMap);
+        assertEquals(ascendingMap, sortByValue(unsortedValueMap, Order.ASCENDING));
+        assertEquals(descendingMap, sortByValue(unsortedValueMap, Order.DESCENDING));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class MapUtilsTest {
             1, "Smallest"
         );
 
-        assertEquals(sortByKey(unsortedKeyMap, Order.ASCENDING), ascendingMap);
-        assertEquals(sortByKey(unsortedKeyMap, Order.DESCENDING), descendingMap);
+        assertEquals(ascendingMap, sortByKey(unsortedKeyMap, Order.ASCENDING));
+        assertEquals(descendingMap, sortByKey(unsortedKeyMap, Order.DESCENDING));
     }
 }

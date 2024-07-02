@@ -20,17 +20,58 @@ to make Java programming more enjoyable and efficient.
 ## Install
 
 ### Maven
-```maven
+
+1. Add GitHub Packages to `repositories` in `~/.m2/settings.xml`:
+
+```xml
+<repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/duckysmacky/*</url>
+    <snapshots>
+        <enabled>true</enabled>
+    </snapshots>
+</repository>
+```
+
+2. Add GitHub Packages to `repositories` in `POM.xml`:
+
+```xml
+<repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/duckysmacky/utilimate/</url>
+</repository>
+```
+
+3. Add the package to `dependencies` in `POM.xml`:
+
+```xml
 <dependency>
   <groupId>io.github.duckysmacky</groupId>
   <artifactId>utilimate</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 
 ### Gradle
-```gradle
-implementation 'io.github.duckysmacky:utilimate:0.1.0'
+
+1. Add GitHub Packages to `repositories` in `gradle.build`:
+
+```groovy
+maven {
+    url = uri("https://maven.pkg.github.com/duckysmacky/utilimate")
+    credentials {
+        username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+        password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+    }
+}
+```
+
+*You can generate a token in your [account settings page](https://github.com/settings/tokens)*
+
+2. Add the package to the dependencies in `build.gradle`:
+
+```groovy
+implementation 'io.github.duckysmacky:utilimate:0.2.0'
 ```
 
 ## Features

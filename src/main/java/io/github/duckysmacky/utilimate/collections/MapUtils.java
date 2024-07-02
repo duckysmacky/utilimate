@@ -4,16 +4,14 @@ import io.github.duckysmacky.utilimate.enums.Order;
 
 import java.util.*;
 
-/**
- * <p> Utility class providing static methods for common operations on maps.
+/** <p> Utility class providing static methods for common operations on maps.
  * Includes methods for filtering, sorting by key or value, merging maps, and more.
  * <p> All methods within the class are static and can be used right out of the box.
  */
 public final class MapUtils {
     private MapUtils() {}
 
-    /**
-     * Sorts a given map by its values based on a given order
+    /** Sorts a given map by its values based on a given order
      * @param inputMap map to be sorted
      * @param order order to sort the map by (ascending/descending)
      * @param <K> any key
@@ -31,8 +29,7 @@ public final class MapUtils {
         return sortedMap;
     }
 
-    /**
-     * Sorts a given map by its keys based on a given order
+    /** Sorts a given map by its keys based on a given order
      * @param inputMap map to be sorted
      * @param order order to sort the map by (ascending/descending)
      * @param <K> comparable key
@@ -49,4 +46,6 @@ public final class MapUtils {
         for (Map.Entry<K, V> entry : entryList) sortedMap.put(entry.getKey(), entry.getValue());
         return sortedMap;
     }
+
+    // TODO - add JavaDoc
 }

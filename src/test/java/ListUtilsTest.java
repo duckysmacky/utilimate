@@ -18,13 +18,13 @@ public class ListUtilsTest {
 
     @Test
     public void countOccurrencesTest() {
-        Map<String, Integer> mostCommonName = Map.of(
+        Map<String, Integer> mostCommonNames = Map.of(
                 "Bob", 4,
                 "Alex", 3,
                 "John", 2,
                 "bob", 1
         );
 
-        assertEquals(countOccurrences(nameList), mostCommonName);
+        assertEquals(mostCommonNames, countOccurrences(nameList));
     }
 }

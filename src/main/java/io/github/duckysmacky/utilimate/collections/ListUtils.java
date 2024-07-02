@@ -4,19 +4,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <p> Utility class providing static methods for common operations on lists.
+/** <p> Utility class providing static methods for common operations on lists.
  * Includes methods for filtering, mapping, reversing lists, and more.
  * <p> All methods within the class are static and can be used right out of the box.
  */
 public final class ListUtils {
     private ListUtils() {}
 
-    /**
-     * Counts how many times each unique value appears in a given list
+    /** Counts how many times each unique value appears in a given list
      * @param list list of values
      * @param <T> value
-     * @return {@code Map} containing key-value pairs of each value and number of its occurrences
+     * @return {@code Map} map containing key-value pairs of each value and number of its occurrences
+     * @since 0.1.0
      */
     public static <T> Map<T, Integer> countOccurrences(List<T> list) {
         Map<T, Integer> occurrences = new HashMap<>();
@@ -30,6 +29,4 @@ public final class ListUtils {
         }
         return occurrences;
     }
-
-    // TODO - add findMostCommon function
 }

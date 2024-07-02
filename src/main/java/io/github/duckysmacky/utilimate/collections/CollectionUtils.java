@@ -2,19 +2,18 @@ package io.github.duckysmacky.utilimate.collections;
 
 import java.util.Collection;
 
-/**
- * <p> Utility class providing static methods for common operations on collections.
+/** <p> Utility class providing static methods for common operations on collections.
  * Includes methods for filtering, mapping, and checking conditions across any type of collection.
  * <p> All methods within the class are static and can be used right out of the box.
  */
 public final class CollectionUtils {
     private CollectionUtils() {}
 
-    /**
-     * Finds the smallest value in a given collection
+    /** Finds the smallest value in a given collection
      * @param collection collection of numbers
      * @param <T> value extends number
-     * @return biggest number value
+     * @return smallest number value
+     * @since 0.1.0
      */
     // TODO - Separate decimal and whole numbers
     public static <T extends Number> Number min(Collection<T> collection) {
@@ -23,11 +22,11 @@ public final class CollectionUtils {
         return smallest;
     }
 
-    /**
-     * Finds the biggest value in a given collection
+    /** Finds the biggest value in a given collection
      * @param collection collection of numbers
      * @param <T> value extends number
      * @return biggest number value
+     * @since 0.1.0
      */
     // TODO - Separate decimal and whole numbers
     public static <T extends Number> Number max(Collection<T> collection) {
@@ -36,11 +35,11 @@ public final class CollectionUtils {
         return biggest;
     }
 
-    /**
-     * Finds the sum of all values in a given collection
+    /** Finds the sum of all values in a given collection
      * @param collection collection of numbers
      * @param <T> value extends number
      * @return sum of all values
+     * @since 0.1.0
      */
     public static <T extends Number> Number sum(Collection<T> collection) {
         float sum = 0f;
@@ -48,11 +47,11 @@ public final class CollectionUtils {
         return sum;
     }
 
-    /**
-     * Checks values in a collection for being valid (true or not null)
+    /** Checks values in a collection for being valid (true or not null)
      * @param collection collection of values
      * @param <T> value
      * @return {@code boolean} whether all values are valid
+     * @since 0.1.0
      */
     public static <T> boolean all(Collection<T> collection) {
         for (T value : collection) {
@@ -65,11 +64,11 @@ public final class CollectionUtils {
         return true;
     }
 
-    /**
-     * Checks for at least one value in a collection being valid (true or not null)
+    /** Checks for at least one value in a collection being valid (true or not null)
      * @param collection collection of values
      * @param <T> value
      * @return {@code boolean} whether any value is valid
+     * @since 0.1.0
      */
     public static <T> boolean any(Collection<T> collection) {
         for (T value : collection) {
