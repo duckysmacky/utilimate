@@ -1,5 +1,9 @@
 # UtiliMate
 
+![build](https://github.com/duckysmacky/utilimate/actions/workflows/build.yml/badge.svg)
+![deploy](https://github.com/duckysmacky/utilimate/actions/workflows/deploy.yml/badge.svg)
+![version](https://img.shields.io/badge/version-0.2.0-blue)
+
 The ultimate Java utility library to streamline development and reduce boilerplate code
 
 ## About
