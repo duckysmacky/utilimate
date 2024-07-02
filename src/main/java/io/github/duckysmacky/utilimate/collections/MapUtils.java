@@ -46,6 +46,4 @@ public final class MapUtils {
         for (Map.Entry<K, V> entry : entryList) sortedMap.put(entry.getKey(), entry.getValue());
         return sortedMap;
     }
-
-    // TODO - add JavaDoc
 }

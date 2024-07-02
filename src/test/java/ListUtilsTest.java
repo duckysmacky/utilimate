@@ -1,3 +1,6 @@
+import io.github.duckysmacky.utilimate.collections.MapUtils;
+import io.github.duckysmacky.utilimate.enums.Order;
+import io.github.duckysmacky.utilimate.strings.StringUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -18,13 +21,31 @@ public class ListUtilsTest {
 
     @Test
     public void countOccurrencesTest() {
-        Map<String, Integer> mostCommonNames = Map.of(
+        Map<String, Integer> nameOccurrences = Map.of(
                 "Bob", 4,
                 "Alex", 3,
                 "John", 2,
                 "bob", 1
         );
+        Map<String, Integer> ascendingNameOccurrences = MapUtils.sortByKey(nameOccurrences, Order.ASCENDING);
+        Map<String, Integer> descendingNameOccurrences = MapUtils.sortByKey(nameOccurrences, Order.DESCENDING);
 
-        assertEquals(mostCommonNames, countOccurrences(nameList));
+        assertEquals(nameOccurrences, countOccurrences(nameList));
+        assertEquals(ascendingNameOccurrences, countOccurrences(nameList, Order.ASCENDING));
+        assertEquals(descendingNameOccurrences, countOccurrences(nameList, Order.DESCENDING));
+    }
+
+    @Test
+    public void findMostCommonTest() {
+        Map.Entry<String, Integer> mostCommonName = Map.entry("Bob", 4);
+
+        assertEquals(mostCommonName, findMostCommon(nameList));
+    }
+
+    @Test
+    public void findLeastCommonTest() {
+        Map.Entry<String, Integer> leastCommonName = Map.entry("bob", 1);
+
+        assertEquals(leastCommonName, findLeastCommon(nameList));
     }
 }
