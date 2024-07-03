@@ -13,5 +13,5 @@
 ### Added
 
 - 7 String Utilities
-- 2 List Utilities
+- 7 List Utilities
 - Since `x` version to JavaDocs

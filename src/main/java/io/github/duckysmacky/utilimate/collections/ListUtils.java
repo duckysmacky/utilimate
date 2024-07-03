@@ -2,9 +2,7 @@ package io.github.duckysmacky.utilimate.collections;
 
 import io.github.duckysmacky.utilimate.enums.Order;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -19,7 +17,7 @@ public final class ListUtils {
 
     /** Counts how many times each unique value appears in a given list
      * @param list list of values
-     * @param <T> value
+     * @param <T> list value type
      * @return {@code Map} map containing key-value pairs of each value and number of its occurrences
      * @since 0.1.0
      */
@@ -38,7 +36,7 @@ public final class ListUtils {
 
     /** Counts how many times each unique value appears in a given list and sorts them based on a given order
      * @param list list of values
-     * @param <T> value
+     * @param <T> list value type
      * @param order order to sort the map by (ascending/descending)
      * @return {@code Map} sorted map containing key-value pairs of each value and number of its occurrences
      * @since 0.2.0
@@ -58,7 +56,7 @@ public final class ListUtils {
 
     /** Finds the value which appears the most amount of times in a given list
      * @param list list of values
-     * @param <T> value
+     * @param <T> list value type
      * @return {@code Entry} an entry containing most common value (key) and its occurrences (value)
      * @since 0.2.0
      */
@@ -87,7 +85,7 @@ public final class ListUtils {
 
     /** Finds the value which appears the least amount of times in a given list
      * @param list list of values
-     * @param <T> value
+     * @param <T> list value type
      * @return {@code Entry} an entry containing least common (key) and its occurrences (value)
      * @since 0.2.0
      */
@@ -114,21 +112,70 @@ public final class ListUtils {
         return leastCommon;
     }
 
+    /** Filters a given list based on a predicate
+     * @param list list to filter
+     * @param predicate condition to sort based on
+     * @param <T> list value type
+     * @return {@code List} sorted list
+     * @since 0.2.0
+     */
     public static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
         return list.stream()
             .filter(predicate)
             .collect(Collectors.toList());
     }
 
+    /** Applies a mapper function to each element in the given list
+     * @param list list to map
+     * @param mapper function to apply to each element
+     * @param <T> list value type
+     * @param <R> return value
+     * @return {@code List} mapped list
+     * @since 0.2.0
+     */
     public static <T, R> List<R> map(List<T> list, Function<T, R> mapper) {
         return list.stream()
             .map(mapper)
             .collect(Collectors.toList());
     }
 
+    /** Produces a single result from the given list using an accumulator function
+     * @param list list to reduce
+     * @param accumulator function that takes a partial result of the operation and the next element of the list
+     * @param <T> list value type
+     * @return {@code T} result value
+     * @since 0.2.0
+     */
     public static <T> T reduce(List<T> list, BinaryOperator<T> accumulator) {
         return list.stream()
             .reduce(accumulator)
             .orElse(null);
     }
+
+    /** Removes duplicate values from a list
+     * @param list list to remove duplicates from
+     * @param <T> list value type
+     * @return {@code List} list with only unique values
+     * @since 0.2.0
+     */
+    public static <T> List<T> unique(List<T> list) {
+        List<T> uniqueList = new ArrayList<>();
+        Set<T> set = new HashSet<>(list);
+        uniqueList.addAll(set);
+        return uniqueList;
+    }
+
+    /** Flattens a list of lists into a single list
+     * @param listofLists list of lists to be flattened
+     * @param <T> list value type
+     * @return {@code List} flattened list
+     * @since 0.2.0
+     */
+    public static <T> List<T> flatten(List<List<T>> listofLists) {
+        List<T> flattenedList = new ArrayList<>();
+        for (List<T> list : listofLists) flattenedList.addAll(list);
+        return flattenedList;
+    }
+
+    // TODO - same(List<T> list)
 }
