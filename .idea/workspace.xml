@@ -8,10 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c96dc56-260f-48c6-9cab-9c87ab76e937" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/collections/ListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ListUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/strings/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/duckysmacky/utilimate/strings/StringUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,5 +266,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add 5 list utilities" />
+    <MESSAGE value="add 5 list utilities" />
+    <MESSAGE value="add 2 list utilities" />
+    <MESSAGE value="add 2 list utilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 2 list utilities" />
   </component>
 </project>

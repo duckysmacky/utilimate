@@ -177,5 +177,5 @@ public final class ListUtils {
         return flattenedList;
     }
 
-    // TODO - same(List<T> list)
+    // TODO - same(List<T> list) all values the same?
 }

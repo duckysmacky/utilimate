@@ -1,7 +1,6 @@
 package io.github.duckysmacky.utilimate.strings;
 
-import java.util.Collection;
-import java.util.StringJoiner;
+import java.util.*;
 
 /** <p>Utility class providing static methods for common string manipulation operations.
  * Includes methods for changing, validating and getting info about strings.
@@ -108,5 +107,58 @@ public final class StringUtils {
             }
         }
         return biggest;
+    }
+
+    /** Finds the character which appears the most amount of times in a given string
+     * @param string list of values
+     * @return {@code Entry} an entry containing most common character (key) and its occurrences (value)
+     * @since 0.2.0
+     */
+    public static Map.Entry<Character, Integer> findMostCommon(String string) {
+        // Count occurrences
+        Map<Character, Integer> occurrences = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            occurrences.put(
+                c,
+                occurrences.get(c) != null
+                    ? occurrences.get(c) + 1
+                    : 1
+            );
+        }
+        // Get most common
+        Map.Entry<Character, Integer> mostCommon = null;
+        int biggestOccurrence = 0;
+        for (Map.Entry<Character, Integer> entry : occurrences.entrySet()) {
+            if (entry.getValue() > biggestOccurrence) {
+                mostCommon = entry;
+                biggestOccurrence = entry.getValue();
+            }
+        }
+        return mostCommon;
+    }
+
+    /** Finds the character which appears the least amount of times in a given string
+     * @param string list of values
+     * @return {@code Entry} an entry containing least common character (key) and its occurrences (value)
+     * @since 0.2.0
+     */
+    public static Map.Entry<Character, Integer> findLeastCommon(String string) {
+        // Count occurrences
+        Map<Character, Integer> occurrences = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            occurrences.put(c, occurrences.get(c) != null ? occurrences.get(c) + 1 : 1);
+        }
+        // Get most common
+        Map.Entry<Character, Integer> leastCommon = null;
+        int smallestOccurrence = Integer.MAX_VALUE;
+        for (Map.Entry<Character, Integer> entry : occurrences.entrySet()) {
+            if (entry.getValue() < smallestOccurrence) {
+                leastCommon = entry;
+                smallestOccurrence = entry.getValue();
+            }
+        }
+        return leastCommon;
     }
 }
