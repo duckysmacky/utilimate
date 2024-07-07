@@ -139,21 +139,20 @@ public final class ListUtils {
      * @since 0.2.0
      */
     public static <T> List<T> unique(List<T> list) {
-        List<T> uniqueList = new ArrayList<>();
         Set<T> set = new HashSet<>(list);
-        uniqueList.addAll(set);
+        List<T> uniqueList = new ArrayList<>(set);
         return uniqueList;
     }
 
     /** Flattens a list of lists into a single list
-     * @param listofLists list of lists to be flattened
+     * @param listOfLists list of lists to be flattened
      * @param <T> list value type
      * @return {@code List} flattened list
      * @since 0.2.0
      */
-    public static <T> List<T> flatten(List<List<T>> listofLists) {
+    public static <T> List<T> flatten(List<List<T>> listOfLists) {
         List<T> flattenedList = new ArrayList<>();
-        for (List<T> list : listofLists) flattenedList.addAll(list);
+        for (List<T> list : listOfLists) flattenedList.addAll(list);
         return flattenedList;
     }
 
