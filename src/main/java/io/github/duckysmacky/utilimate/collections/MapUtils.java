@@ -16,11 +16,11 @@ public final class MapUtils {
      * @param order order to sort the map by (ascending/descending)
      * @param <K> any key
      * @param <V> comparable value
-     * @return {@code Map} sorted map
+     * @return {@code HashMap} sorted map
      */
-    public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> inputMap, Order order) {
+    public static <K, V extends Comparable<? super V>> HashMap<K, V> sortByValue(Map<K, V> inputMap, Order order) {
         List<Map.Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
-        Map<K, V> sortedMap = new HashMap<>();
+        HashMap<K, V> sortedMap = new HashMap<>();
         switch (order) {
             case ASCENDING -> entryList.sort(Map.Entry.comparingByValue());
             case DESCENDING -> entryList.sort(Collections.reverseOrder(Map.Entry.comparingByValue()));
@@ -34,11 +34,11 @@ public final class MapUtils {
      * @param order order to sort the map by (ascending/descending)
      * @param <K> comparable key
      * @param <V> any value
-     * @return {@code Map} sorted map
+     * @return {@code HashMap} sorted map
      */
-    public static <K extends Comparable<? super K>, V> Map<K, V> sortByKey(Map<K, V> inputMap, Order order) {
+    public static <K extends Comparable<? super K>, V> HashMap<K, V> sortByKey(Map<K, V> inputMap, Order order) {
         List<Map.Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
-        Map<K, V> sortedMap = new HashMap<>();
+        HashMap<K, V> sortedMap = new HashMap<>();
         switch (order) {
             case ASCENDING -> entryList.sort(Map.Entry.comparingByKey());
             case DESCENDING -> entryList.sort(Collections.reverseOrder(Map.Entry.comparingByKey()));

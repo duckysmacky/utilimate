@@ -3,7 +3,6 @@ import io.github.duckysmacky.utilimate.enums.Order;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +20,7 @@ public class ListUtilsTest {
     }
 
     @Test
-    public void countOccurrencesTest() {
+    public void countTest() {
         Map<String, Integer> nameOccurrences = Map.of(
                 "Bob", 4,
                 "Alex", 3,
@@ -31,9 +30,9 @@ public class ListUtilsTest {
         Map<String, Integer> ascendingNameOccurrences = MapUtils.sortByKey(nameOccurrences, Order.ASCENDING);
         Map<String, Integer> descendingNameOccurrences = MapUtils.sortByKey(nameOccurrences, Order.DESCENDING);
 
-        assertEquals(nameOccurrences, countOccurrences(nameList));
-        assertEquals(ascendingNameOccurrences, countOccurrences(nameList, Order.ASCENDING));
-        assertEquals(descendingNameOccurrences, countOccurrences(nameList, Order.DESCENDING));
+        assertEquals(nameOccurrences, count(nameList));
+        assertEquals(ascendingNameOccurrences, count(nameList, Order.ASCENDING));
+        assertEquals(descendingNameOccurrences, count(nameList, Order.DESCENDING));
     }
 
     @Test

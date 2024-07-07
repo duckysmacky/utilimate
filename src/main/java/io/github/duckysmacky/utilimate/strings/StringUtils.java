@@ -1,5 +1,8 @@
 package io.github.duckysmacky.utilimate.strings;
 
+import io.github.duckysmacky.utilimate.collections.MapUtils;
+import io.github.duckysmacky.utilimate.enums.Order;
+
 import java.util.*;
 
 /** <p>Utility class providing static methods for common string manipulation operations.
@@ -115,18 +118,7 @@ public final class StringUtils {
      * @since 0.2.0
      */
     public static Map.Entry<Character, Integer> findMostCommon(String string) {
-        // Count occurrences
-        Map<Character, Integer> occurrences = new HashMap<>();
-        for (int i = 0; i < string.length(); i++) {
-            char c = string.charAt(i);
-            occurrences.put(
-                c,
-                occurrences.get(c) != null
-                    ? occurrences.get(c) + 1
-                    : 1
-            );
-        }
-        // Get most common
+        Map<Character, Integer> occurrences = count(string);
         Map.Entry<Character, Integer> mostCommon = null;
         int biggestOccurrence = 0;
         for (Map.Entry<Character, Integer> entry : occurrences.entrySet()) {
@@ -140,17 +132,11 @@ public final class StringUtils {
 
     /** Finds the character which appears the least amount of times in a given string
      * @param string list of values
-     * @return {@code Entry} an entry containing least common character (key) and its occurrences (value)
+     * @return {@code Entry} an entry containing the least common character (key) and its occurrences (value)
      * @since 0.2.0
      */
     public static Map.Entry<Character, Integer> findLeastCommon(String string) {
-        // Count occurrences
-        Map<Character, Integer> occurrences = new HashMap<>();
-        for (int i = 0; i < string.length(); i++) {
-            char c = string.charAt(i);
-            occurrences.put(c, occurrences.get(c) != null ? occurrences.get(c) + 1 : 1);
-        }
-        // Get most common
+        Map<Character, Integer> occurrences = count(string);
         Map.Entry<Character, Integer> leastCommon = null;
         int smallestOccurrence = Integer.MAX_VALUE;
         for (Map.Entry<Character, Integer> entry : occurrences.entrySet()) {
@@ -160,5 +146,34 @@ public final class StringUtils {
             }
         }
         return leastCommon;
+    }
+
+    /** Counts how many times each character appears in a given string
+     * @param string string
+     * @return {@code Map} map containing key-value pairs of each character and number of its occurrences
+     * @since 0.2.0
+     */
+    public static Map<Character, Integer> count(String string) {
+        Map<Character, Integer> occurrences = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            occurrences.put(c, occurrences.get(c) != null ? occurrences.get(c) + 1 : 1);
+        }
+        return occurrences;
+    }
+
+    /** Counts how many times each character appears in a given string and sorts them based on a given order
+     * @param string string
+     * @param order order to sort the map by (ascending/descending)
+     * @return {@code Map} map containing key-value pairs of each character and number of its occurrences
+     * @since 0.2.0
+     */
+    public static Map<Character, Integer> count(String string, Order order) {
+        Map<Character, Integer> occurrences = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            occurrences.put(c, occurrences.get(c) != null ? occurrences.get(c) + 1 : 1);
+        }
+        return MapUtils.sortByValue(occurrences, order);
     }
 }

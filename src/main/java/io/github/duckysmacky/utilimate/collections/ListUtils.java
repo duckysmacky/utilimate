@@ -21,7 +21,7 @@ public final class ListUtils {
      * @return {@code Map} map containing key-value pairs of each value and number of its occurrences
      * @since 0.1.0
      */
-    public static <T> Map<T, Integer> countOccurrences(List<T> list) {
+    public static <T> Map<T, Integer> count(List<T> list) {
         Map<T, Integer> occurrences = new HashMap<>();
         for (T item : list) {
             occurrences.put(
@@ -41,7 +41,7 @@ public final class ListUtils {
      * @return {@code Map} sorted map containing key-value pairs of each value and number of its occurrences
      * @since 0.2.0
      */
-    public static <T> Map<T, Integer> countOccurrences(List<T> list, Order order) {
+    public static <T> Map<T, Integer> count(List<T> list, Order order) {
         Map<T, Integer> occurrences = new HashMap<>();
         for (T item : list) {
             occurrences.put(
@@ -61,17 +61,7 @@ public final class ListUtils {
      * @since 0.2.0
      */
     public static <T> Map.Entry<T, Integer> findMostCommon(List<T> list) {
-        // Count occurrences
-        Map<T, Integer> occurrences = new HashMap<>();
-        for (T item : list) {
-            occurrences.put(
-                item,
-                occurrences.get(item) != null
-                    ? occurrences.get(item) + 1
-                    : 1
-            );
-        }
-        // Get most common
+        Map<T, Integer> occurrences = count(list);
         Map.Entry<T, Integer> mostCommon = null;
         int biggestOccurrence = 0;
         for (Map.Entry<T, Integer> entry : occurrences.entrySet()) {
@@ -90,17 +80,7 @@ public final class ListUtils {
      * @since 0.2.0
      */
     public static <T> Map.Entry<T, Integer> findLeastCommon(List<T> list) {
-        // Count occurrences
-        Map<T, Integer> occurrences = new HashMap<>();
-        for (T item : list) {
-            occurrences.put(
-                item,
-                occurrences.get(item) != null
-                    ? occurrences.get(item) + 1
-                    : 1
-            );
-        }
-        // Get least common
+        Map<T, Integer> occurrences = count(list);
         Map.Entry<T, Integer> leastCommon = null;
         int smallestOccurrence = Integer.MAX_VALUE;
         for (Map.Entry<T, Integer> entry : occurrences.entrySet()) {
