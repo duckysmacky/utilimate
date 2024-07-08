@@ -84,4 +84,13 @@ public class ListUtilsTest {
 
         assertEquals(flattenedList, flatten(listOfListOfNumbers));
     }
+
+    @Test
+    public void sameTest() {
+        List<Integer> sameNumberList = List.of(5, 5, 5, 5, 5);
+        List<Integer> differentNumberList = List.of(1, 2, 3, 4, 5);
+
+        assertTrue(same(sameNumberList));
+        assertFalse(same(differentNumberList));
+    }
 }

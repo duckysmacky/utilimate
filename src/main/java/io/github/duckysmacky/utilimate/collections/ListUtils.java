@@ -156,5 +156,15 @@ public final class ListUtils {
         return flattenedList;
     }
 
-    // TODO - same(List<T> list) all values the same?
+    /** Checks if all of the values in a given list are the same
+     * @param list list to check
+     * @param <T> list value type
+     * @return {@code boolean} whether all of the values in the list are equal
+     * @since 0.2.0
+     */
+    public static <T> boolean same(List<T> list) {
+        T originalValue = list.getFirst();
+        for (T value : list) if (!value.equals(originalValue)) return false;
+        return true;
+    }
 }
