@@ -3,6 +3,7 @@ package io.github.duckysmacky.utilimate.collections;
 import io.github.duckysmacky.utilimate.enums.Order;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 /** <p> Utility class providing static methods for common operations on maps.
  * Includes methods for filtering, sorting by key or value, merging maps, and more.
@@ -19,13 +20,13 @@ public final class MapUtils {
      * @return {@code HashMap} sorted map
      */
     public static <K, V extends Comparable<? super V>> HashMap<K, V> sortByValue(Map<K, V> inputMap, Order order) {
-        List<Map.Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
+        List<Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
         HashMap<K, V> sortedMap = new HashMap<>();
         switch (order) {
-            case ASCENDING -> entryList.sort(Map.Entry.comparingByValue());
-            case DESCENDING -> entryList.sort(Collections.reverseOrder(Map.Entry.comparingByValue()));
+            case ASCENDING -> entryList.sort(Entry.comparingByValue());
+            case DESCENDING -> entryList.sort(Collections.reverseOrder(Entry.comparingByValue()));
         }
-        for (Map.Entry<K, V> entry : entryList) sortedMap.put(entry.getKey(), entry.getValue());
+        for (Entry<K, V> entry : entryList) sortedMap.put(entry.getKey(), entry.getValue());
         return sortedMap;
     }
 
@@ -37,13 +38,27 @@ public final class MapUtils {
      * @return {@code HashMap} sorted map
      */
     public static <K extends Comparable<? super K>, V> HashMap<K, V> sortByKey(Map<K, V> inputMap, Order order) {
-        List<Map.Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
+        List<Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
         HashMap<K, V> sortedMap = new HashMap<>();
         switch (order) {
-            case ASCENDING -> entryList.sort(Map.Entry.comparingByKey());
-            case DESCENDING -> entryList.sort(Collections.reverseOrder(Map.Entry.comparingByKey()));
+            case ASCENDING -> entryList.sort(Entry.comparingByKey());
+            case DESCENDING -> entryList.sort(Collections.reverseOrder(Entry.comparingByKey()));
         }
-        for (Map.Entry<K, V> entry : entryList) sortedMap.put(entry.getKey(), entry.getValue());
+        for (Entry<K, V> entry : entryList) sortedMap.put(entry.getKey(), entry.getValue());
         return sortedMap;
+    }
+
+    /** Inverts keys and values of a map (assuming values are unique, else overrides old value)
+     * @param map map to invert
+     * @param <K> key type
+     * @param <V> value type
+     * @return {@code Map} inverted map (value-key pairs of original key-value pairs)
+     * @since 0.2.0
+     */
+    public static <K, V> Map<V, K> invert(Map<K, V> map) {
+        List<Entry<K, V>> entryList = new ArrayList<>(map.entrySet());
+        Map<V, K> invertedMap = new HashMap<>();
+        for (Entry<K, V> entry : entryList) invertedMap.put(entry.getValue(), entry.getKey());
+        return invertedMap;
     }
 }
