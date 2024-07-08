@@ -156,7 +156,7 @@ public final class ListUtils {
         return flattenedList;
     }
 
-    /** Checks if all of the values in a given list are the same
+    /** Checks if all the values in a given list are the same
      * @param list list to check
      * @param <T> list value type
      * @return {@code boolean} whether all of the values in the list are equal
@@ -166,5 +166,19 @@ public final class ListUtils {
         T originalValue = list.getFirst();
         for (T value : list) if (!value.equals(originalValue)) return false;
         return true;
+    }
+
+
+    /** Merges multiple lists together by adding all the values into a single one
+     * @param lists lists to merge
+     * @param <T> list value type
+     * @return {@code List} merged list
+     * @since 0.2.0
+     */
+    @SafeVarargs
+    public static <T> List<T> merge(List<T>... lists) {
+        List<T> mergedList = new ArrayList<>();
+        for (List<T> list : lists) mergedList.addAll(list);
+        return mergedList;
     }
 }

@@ -93,4 +93,11 @@ public class ListUtilsTest {
         assertTrue(same(sameNumberList));
         assertFalse(same(differentNumberList));
     }
+
+    @Test
+    public void mergeTest() {
+        List<Integer> mergedList = List.of(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5);
+
+        assertEquals(mergedList, merge(numberList, numberList, numberList));
+    }
 }

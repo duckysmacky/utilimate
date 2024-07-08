@@ -93,12 +93,37 @@ public class MapUtilsTest {
         );
         Map<Integer, String> invertedRepeatedMap = Map.of(
             1, "a",
+            2, "b",
             3, "c",
-            2, "d",
             5, "e"
         );
 
         assertEquals(invertedNormalMap, invert(normalMap));
         assertEquals(invertedRepeatedMap, invert(repeatedMap));
+    }
+
+    @Test
+    public void mergeTest() {
+        Map<String, Integer> mergedMap = Map.of(
+            "a", 1, "b", 2,
+            "c", 3, "d", 4,
+            "e", 5, "f", 6
+        );
+        Map<String, Integer> repeatedMergedMap = Map.of(
+            "a", 1, "b", 2,
+            "c", 3,
+            "e", 5, "d", 6
+        );
+
+        assertEquals(mergedMap, merge(
+            Map.of("a", 1, "b", 2),
+            Map.of("c", 3, "d", 4),
+            Map.of("e", 5, "f", 6)
+        ));
+        assertEquals(repeatedMergedMap, merge(
+            Map.of("a", 1, "b", 2),
+            Map.of("c", 3, "d", 4),
+            Map.of("e", 5, "d", 6)
+        ));
     }
 }

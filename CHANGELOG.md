@@ -14,4 +14,5 @@
 
 - 10 String Utilities
 - 8 List Utilities
-- Since `x` version to JavaDocs
+- 3 Map Utilities
+- Since `x.x.x` version to JavaDocs
