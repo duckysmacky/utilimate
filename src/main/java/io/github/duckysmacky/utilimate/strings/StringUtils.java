@@ -138,7 +138,7 @@ public final class StringUtils {
             char c = string.charAt(i);
             occurrences.put(c, occurrences.get(c) != null ? occurrences.get(c) + 1 : 1);
         }
-        return MapUtils.sortByValue(occurrences, order);
+        return MapUtils.sortValue(occurrences, order);
     }
 
     /** Finds the character which appears the most amount of times in a given string

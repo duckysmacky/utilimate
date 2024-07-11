@@ -27,8 +27,8 @@ public class ListUtilsTest {
                 "John", 2,
                 "bob", 1
         );
-        Map<String, Integer> ascendingNameOccurrences = MapUtils.sortByKey(nameOccurrences, Order.ASCENDING);
-        Map<String, Integer> descendingNameOccurrences = MapUtils.sortByKey(nameOccurrences, Order.DESCENDING);
+        Map<String, Integer> ascendingNameOccurrences = MapUtils.sortKey(nameOccurrences, Order.ASCENDING);
+        Map<String, Integer> descendingNameOccurrences = MapUtils.sortKey(nameOccurrences, Order.DESCENDING);
 
         assertEquals(nameOccurrences, count(nameList));
         assertEquals(ascendingNameOccurrences, count(nameList, Order.ASCENDING));

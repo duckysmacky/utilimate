@@ -51,7 +51,7 @@ public final class ListUtils {
                     : 1
             );
         }
-        return MapUtils.sortByValue(occurrences, order);
+        return MapUtils.sortValue(occurrences, order);
     }
 
     /** Finds the value which appears the most amount of times in a given list
@@ -94,7 +94,7 @@ public final class ListUtils {
 
     /** Filters a given list based on a predicate
      * @param list list to filter
-     * @param predicate condition to sort based on
+     * @param predicate condition to filter based on
      * @param <T> list value type
      * @return {@code List} sorted list
      * @since 0.2.0
@@ -139,9 +139,7 @@ public final class ListUtils {
      * @since 0.2.0
      */
     public static <T> List<T> unique(List<T> list) {
-        Set<T> set = new HashSet<>(list);
-        List<T> uniqueList = new ArrayList<>(set);
-        return uniqueList;
+        return new ArrayList<>(new HashSet<>(list));
     }
 
     /** Flattens a list of lists into a single list
@@ -167,7 +165,6 @@ public final class ListUtils {
         for (T value : list) if (!value.equals(originalValue)) return false;
         return true;
     }
-
 
     /** Merges multiple lists together by adding all the values into a single one
      * @param lists lists to merge
