@@ -4,10 +4,8 @@ import io.github.duckysmacky.utilimate.enums.Order;
 
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /** <p> Utility class providing static methods for common operations on maps.
  * Includes methods for filtering, sorting by key or value, merging maps, and more.
@@ -22,10 +20,11 @@ public final class MapUtils {
      * @param <K> any key
      * @param <V> comparable value
      * @return {@code HashMap} sorted map
+     * @since 0.1.0
      */
-    public static <K, V extends Comparable<? super V>> HashMap<K, V> sortValue(Map<K, V> inputMap, Order order) {
+    public static <K, V extends Comparable<? super V>> LinkedHashMap<K, V> sortValue(Map<K, V> inputMap, Order order) {
         List<Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
-        HashMap<K, V> sortedMap = new HashMap<>();
+        LinkedHashMap<K, V> sortedMap = new LinkedHashMap<>();
         switch (order) {
             case ASCENDING -> entryList.sort(Entry.comparingByValue());
             case DESCENDING -> entryList.sort(Collections.reverseOrder(Entry.comparingByValue()));
@@ -40,10 +39,11 @@ public final class MapUtils {
      * @param <K> comparable key
      * @param <V> any value
      * @return {@code HashMap} sorted map
+     * @since 0.1.0
      */
-    public static <K extends Comparable<? super K>, V> HashMap<K, V> sortKey(Map<K, V> inputMap, Order order) {
+    public static <K extends Comparable<? super K>, V> LinkedHashMap<K, V> sortKey(Map<K, V> inputMap, Order order) {
         List<Entry<K, V>> entryList = new ArrayList<>(inputMap.entrySet());
-        HashMap<K, V> sortedMap = new HashMap<>();
+        LinkedHashMap<K, V> sortedMap = new LinkedHashMap<>();
         switch (order) {
             case ASCENDING -> entryList.sort(Entry.comparingByKey());
             case DESCENDING -> entryList.sort(Collections.reverseOrder(Entry.comparingByKey()));
@@ -87,6 +87,7 @@ public final class MapUtils {
      * @param <K> key type
      * @param <V> value type
      * @return {@code Map} filtered map by keys
+     * @since 0.2.0
      */
     public static <K, V> Map<K, V> filterKey(Map<K, V> map, Predicate<K> predicate) {
         Map<K, V> filteredMap = new HashMap<>();
@@ -103,6 +104,7 @@ public final class MapUtils {
      * @param <K> key type
      * @param <V> value type
      * @return {@code Map} filtered map by values
+     * @since 0.2.0
      */
     public static <K, V> Map<K, V> filterValue(Map<K, V> map, Predicate<V> predicate) {
         Map<K, V> filteredMap = new HashMap<>();

@@ -8,8 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c96dc56-260f-48c6-9cab-9c87ab76e937" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_07_2024_16_06__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +69,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "duckysmacky"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;duckysmacky&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/duckysmacky/utilimate",
-    "accountId": "624aec98-4870-41a2-9fe7-dfbce89edce3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/duckysmacky/utilimate&quot;,
+    &quot;accountId&quot;: &quot;624aec98-4870-41a2-9fe7-dfbce89edce3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -99,34 +99,34 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.MapUtilsTest.invertTest.executor": "Run",
-    "Gradle.MapUtilsTest.mergeTest.executor": "Run",
-    "Gradle.ssutils [clean].executor": "Run",
-    "Gradle.utilimate [build].executor": "Run",
-    "Gradle.utilimate [clean].executor": "Run",
-    "Gradle.utilimate [javadocJar].executor": "Run",
-    "Gradle.utilimate [javadoc].executor": "Run",
-    "Gradle.utilimate [jreleaserPublish].executor": "Run",
-    "Gradle.utilimate [publishToMavenLocal].executor": "Run",
-    "Gradle.utilimate [publish].executor": "Run",
-    "Gradle.utilimate [test].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "0.2.0",
-    "ignore.virus.scanning.warn.message": "true",
-    "java.suggest.annotation.dependency": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/nikdor/Projects/utilimate",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.VCS"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.MapUtilsTest.invertTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MapUtilsTest.mergeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ssutils [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [javadocJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [jreleaserPublish].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [publishToMavenLocal].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [publish].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.utilimate [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;0.2.0&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;java.suggest.annotation.dependency&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikdor/Projects/utilimate&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nikdor\Projects\utilimate\.gradle" />
@@ -135,7 +135,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MapUtilsTest.mergeTest">
+  <component name="RunManager" selected="Gradle.utilimate [test]">
     <configuration name="MapUtilsTest.invertTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -252,8 +252,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MapUtilsTest.mergeTest" />
         <item itemvalue="Gradle.utilimate [test]" />
+        <item itemvalue="Gradle.MapUtilsTest.mergeTest" />
         <item itemvalue="Gradle.MapUtilsTest.invertTest" />
         <item itemvalue="Gradle.utilimate [publish]" />
         <item itemvalue="Gradle.utilimate [build]" />

@@ -25,19 +25,7 @@ to make Java programming more enjoyable and efficient.
 
 ### Maven
 
-1. Add GitHub Packages to `repositories` in `~/.m2/settings.xml`:
-
-```xml
-<repository>
-    <id>github</id>
-    <url>https://maven.pkg.github.com/duckysmacky/*</url>
-    <snapshots>
-        <enabled>true</enabled>
-    </snapshots>
-</repository>
-```
-
-2. Add GitHub Packages to `repositories` in `POM.xml`:
+1. Add GitHub Packages to `repositories` in `POM.xml`:
 
 ```xml
 <repository>
@@ -46,7 +34,7 @@ to make Java programming more enjoyable and efficient.
 </repository>
 ```
 
-3. Add the package to `dependencies` in `POM.xml`:
+2. Add the package to `dependencies` in `POM.xml`:
 
 ```xml
 <dependency>
